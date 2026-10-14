@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sunday Akindoyin | Portfolio</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#e6f2f2;--ink:#0f2f35;--teal:#1f6f78;--soft:#d3e8e8;--white:#fff;--muted:#3f5f66}
+html{scroll-behavior:smooth}
+#about{scroll-margin-top:80px}
+body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+header{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid #b9d3d3;padding:16px 7%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.brand{font-size:22px;font-weight:700;color:var(--ink);text-decoration:none}
+nav a{margin-left:26px;text-decoration:none;color:var(--ink);font-weight:500;padding-bottom:4px;border-bottom:2px solid transparent}
+nav a:hover{color:var(--teal)}
+nav a.active{border-bottom-color:var(--teal);color:var(--teal)}
+.wrap{max-width:1100px;margin:auto;padding:70px 7%}
+.hero{display:flex;justify-content:space-between;align-items:center;gap:40px}
+.hero-text{max-width:600px}
+.hero-text .hi{color:var(--teal);font-weight:600;letter-spacing:1px;text-transform:uppercase;font-size:14px}
+.hero-text h1{font-size:clamp(36px,6vw,56px);line-height:1.1;margin:8px 0}
+.hero-text h2{color:var(--teal);font-size:26px;margin-bottom:12px}
+.btn{display:inline-block;margin:22px 10px 0 0;padding:12px 28px;background:var(--ink);color:#fff;text-decoration:none;border-radius:6px;font-weight:600;border:2px solid var(--ink);cursor:pointer;font-size:16px;font-family:inherit}
+.btn:hover{background:var(--teal);border-color:var(--teal)}
+.btn.light{background:transparent;color:var(--ink)}
+.btn.light:hover{background:var(--ink);color:#fff}
+.photo{width:280px;max-width:100%;height:auto;border-radius:10px;box-shadow:0 4px 14px rgba(0,0,0,.2);flex-shrink:0}
+.ph{height:340px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-size:80px;font-weight:700}
+h2.title{font-size:32px;margin-bottom:8px}
+.sub{color:var(--muted);margin-bottom:28px;max-width:640px}
+.band{background:var(--white)}
+.page-head{background:var(--ink);color:#fff;text-align:center;padding:60px 7%}
+.page-head h1{font-size:clamp(32px,5vw,46px);margin-bottom:10px}
+.page-head p{max-width:620px;margin:auto;color:#cfe3e3}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.card{background:#fff;padding:24px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.1);border-top:4px solid var(--teal)}
+.band .card{background:var(--bg)}
+.card h3{margin-bottom:8px;font-size:19px}
+.card p{color:var(--muted);font-size:15px}
+.tag{display:inline-block;background:var(--soft);color:var(--ink);font-size:13px;font-weight:600;padding:3px 12px;border-radius:20px;margin:0 6px 8px 0}
+.group{margin-bottom:40px}
+.group h3{margin-bottom:14px;color:var(--teal)}
+.chip{background:#fff;border-radius:10px;padding:16px;text-align:center;font-weight:600;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.cta{background:var(--ink);color:#fff;text-align:center;padding:60px 7%}
+.cta h2{font-size:30px;margin-bottom:10px}
+.cta p{color:#cfe3e3}
+.cta .btn{background:#fff;color:var(--ink);border-color:#fff}
+.cta .btn:hover{background:var(--soft)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:30px;align-items:start}
+.card a{color:var(--teal);font-weight:600;word-break:break-all}
+.card+.card{margin-top:16px}
+form label{display:block;font-weight:600;margin:14px 0 6px}
+form input,form textarea{width:100%;padding:12px 14px;border:2px solid #b9d3d3;border-radius:6px;font-size:16px;font-family:inherit;background:#fff}
+form input:focus,form textarea:focus{border-color:var(--teal)}
+footer{background:var(--ink);color:#cfe3e3;text-align:center;padding:24px;font-size:14px}
+footer a{color:#fff}
+@media(max-width:768px){.hero{flex-direction:column-reverse;text-align:center}.contact-grid{grid-template-columns:1fr}nav a{margin:0 12px}.photo{width:240px}.ph{height:290px}}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.view{display:none}.view.on{display:block}
+#hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:50}
+#hdr header{position:static}
+</style>
+</head>
+<body>
+<div id="hdr"><header><a class="brand" href="#home" data-v="home">Sunday Akindoyin</a><nav><a href="#home" data-v="home" class="active">Home</a><a href="#about" data-v="home" data-s="about">About</a><a href="#skills" data-v="skills">Skills</a><a href="#projects" data-v="projects">Projects</a><a href="#contact" data-v="contact">Contact me</a></nav></header></div>
+<main><div class="view on" id="v-home"><section class="wrap hero">
+<div class="hero-text"><p class="hi">Hello, I'm</p><h1>Sunday Akindoyin</h1><h2>Full Stack Developer</h2>
+<p>I am a professional software developer who builds scalable, secure and high-performance applications. I create modern web solutions that solve real-world problems.</p>
+<a class="btn" href="#projects" data-v="projects">View my work</a><a class="btn light" href="#contact" data-v="contact">Contact me</a></div>
+<img class="photo" src="Sundayr.png" alt="Sunday Akindoyin" onerror="this.outerHTML='<div class=&quot;photo ph&quot;>SA</div>'"></section>
+<div class="band" id="about"><section class="wrap"><h2 class="title">About me</h2><p class="sub">A little about who I am and how I work.</p>
+<p>I'm a passionate developer with strong experience in frontend and backend technologies. I enjoy building clean, efficient and user-friendly applications.</p><br>
+<p>I'm also a seasoned website designer, crafting responsive, good-looking online experiences. My expertise spans responsive design, UI/UX and e-commerce solutions, and I have worked with clients from startups to established brands. My passion is blending creativity with functionality so users enjoy every visit. Whether you are a business that needs a new website or a developer looking to collaborate, let's connect.</p></section></div>
+<section class="wrap"><h2 class="title">What I do</h2><p class="sub">Ways I can help you or your business.</p>
+<div class="grid">
+<div class="card"><h3>Web design</h3><p>Responsive, modern websites with a clean UI/UX that look great on every screen.</p></div>
+<div class="card"><h3>Full stack development</h3><p>Frontend and backend work, from the interface to the server behind it.</p></div>
+<div class="card"><h3>E-commerce solutions</h3><p>Online stores built to turn visitors into customers.</p></div>
+<div class="card"><h3>Custom websites</h3><p>Tailored sites for startups and established brands that grow online presence.</p></div></div></section>
+<section class="cta"><h2>Have a project in mind?</h2><p>Let's talk about how I can help you build it.</p><a class="btn" href="#contact" data-v="contact">Contact me</a></section></div><div class="view" id="v-skills"><section class="page-head"><h1>Skills</h1><p>The tools and technologies I use to design and build for the web.</p></section>
+<section class="wrap">
+<div class="group"><h3>Frontend</h3><div class="grid"><div class="chip">HTML</div><div class="chip">CSS</div><div class="chip">JavaScript</div><div class="chip">React</div></div></div>
+<div class="group"><h3>Backend</h3><div class="grid"><div class="chip">Java</div><div class="chip">SQL</div><div class="chip">Node.js</div><div class="chip">Python</div></div></div>
+<div class="group"><h3>Tools</h3><div class="grid"><div class="chip">Git &amp; GitHub</div></div></div>
+<div class="group"><h3>Design &amp; strengths</h3><div class="grid"><div class="chip">Responsive design</div><div class="chip">UI/UX</div><div class="chip">E-commerce solutions</div></div></div>
+</section>
+<section class="cta"><h2>Need these skills on your project?</h2><p>Tell me what you are building.</p><a class="btn" href="#contact" data-v="contact">Contact me</a></section></div><div class="view" id="v-projects"><section class="page-head"><h1>Projects</h1><p>A selection of the websites and apps I have built.</p></section>
+<section class="wrap"><div class="grid">
+<div class="card"><span class="tag">Website</span><span class="tag">Java</span><span class="tag">SQL</span><span class="tag">HTML</span><span class="tag">CSS</span><h3>Hostel Website</h3><p>A website built for a hostel using Java, SQL, HTML and CSS.</p></div>
+<div class="card"><span class="tag">Website</span><h3>Portfolio Website</h3><p>Personal portfolio website showcasing my work.</p></div>
+<div class="card"><span class="tag">E-commerce</span><h3>E-commerce App</h3><p>Full-featured online store with payment integration.</p></div>
+<div class="card"><span class="tag">Web app</span><h3>Task Manager</h3><p>Web app for managing daily tasks and productivity.</p></div>
+<div class="card"><span class="tag">Website</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><h3>Class Website</h3><p>THE CUNS AND BOMPORD: a multi-page class site with classmate profiles, search and a photo gallery.</p></div>
+</div></section>
+<section class="cta"><h2>Want something like this?</h2><p>I would love to build your next project.</p><a class="btn" href="#contact" data-v="contact">Contact me</a></section></div><div class="view" id="v-contact"><section class="page-head"><h1>Contact me</h1><p>Have a project or a question? Send me a message or reach me directly.</p></section>
+<section class="wrap"><div class="contact-grid"><div>
+<div class="card"><h3>Email</h3><p><a href="mailto:akindoyinsunday10@gmail.com">codewithakinyanju@gmail.com</a></p></div>
+<div class="card"><h3>Phone</h3><p><a href="tel:+2347042249069">+2347042249069</a></p></div>
+<div class="card"><h3>WhatsApp</h3><p><a href="https://wa.me/2347042249069" target="_blank" rel="noopener">Chat with me on WhatsApp</a></p></div></div>
+<form class="card" id="contactForm"><h3>Send me a message</h3>
+<label for="name">Your name</label><input id="name" name="name" required>
+<label for="email">Your email</label><input id="email" name="email" type="email" required>
+<label for="message">Message</label><textarea id="message" name="message" rows="5" required></textarea>
+<button class="btn" type="submit">Send message</button><p id="sent" aria-live="polite"></p></form></div></section></div></main>
+<footer><p>&copy; 2026 Sunday Akindoyin. All rights reserved.</p></footer>
+<script>
+function go(v){document.querySelectorAll('.view').forEach(e=>e.classList.toggle('on',e.id==='v-'+v));
+document.querySelectorAll('[data-v]').forEach(a=>{if(a.closest('nav'))a.classList.toggle('active',a.dataset.v===v&&!a.dataset.s)});
+document.getElementById('hdr').scrollIntoView();scrollTo(0,0)}
+document.addEventListener('click',e=>{const a=e.target.closest('[data-v]');if(a){e.preventDefault();go(a.dataset.v);if(a.dataset.s)document.getElementById(a.dataset.s).scrollIntoView()}});
+const f=document.getElementById("contactForm");
+if(f){f.addEventListener("submit",e=>{e.preventDefault();
+ const d=new FormData(f);
+ const body="Name: "+d.get("name")+"\nEmail: "+d.get("email")+"\n\n"+d.get("message");
+ location.href="mailto:codewithakinyanju@gmail.com?subject="+encodeURIComponent("Message from "+d.get("name")+" (portfolio)")+"&body="+encodeURIComponent(body);
+ document.getElementById("sent").textContent="Opening your email app...";});}
+</script>
+</body>
+</html>
